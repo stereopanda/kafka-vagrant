@@ -1,7 +1,5 @@
 **Vagrant Kafka 3 nodes cluster**  
 
-
-Nuances:
 - ubuntu/xenial64
 - versions: kafka_2.11-2.3.0/zookeeperd_3.4.8-1
 - hardcoded private IP's(Vagrantfile)
@@ -17,7 +15,7 @@ Nuances:
 ```
 To deploy:
 ```bash
-git clone git@gitlab.com:pppublic/kafka-vagrant.git
+git clone https://github.com/stereopanda/kafka-vagrant.git
 cd kafka-vagrant 
 vagrant up
 
