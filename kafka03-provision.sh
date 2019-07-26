@@ -16,6 +16,13 @@ tar -xzf kafka_2.11-2.3.0.tgz
 mkdir /opt/kafka
 cp -r kafka_*/* /opt/kafka
 
+cat << EOF >>  /etc/hosts
+192.168.100.10 kafka01
+192.168.100.11 kafka02
+192.168.100.12 kafka03
+EOF
+
+
 cat << EOF >>  /etc/systemd/system/kafka.service
 [Unit]
 Description=Apache Kafka server (broker)

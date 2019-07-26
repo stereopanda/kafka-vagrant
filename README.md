@@ -27,4 +27,6 @@ echo stat | nc 127.0.0.1 2181 # Show zookeeper status
 /opt/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --list
 /opt/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic test --partitions 3 --replication-factor 3
 /opt/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --describe
+/opt/kafka/bin/kafka-console-producer.sh --broker-list 192.168.100.10:9092,192.168.100.11:9092,192.168.100.12:9092 --topic my-replicated-topic
+/opt/kafka/bin/kafka-console-consumer.sh  --bootstrap-server 192.168.100.10:9092,192.168.100.11:9092,192.168.100.12:9092 --topic my-replicated-topic
 ```
