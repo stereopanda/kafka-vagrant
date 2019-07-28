@@ -8,8 +8,9 @@ echo "net.ipv6.conf.all.disable_ipv6 = 1
       net.ipv6.conf.default.disable_ipv6 = 1
       net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
 sysctl -p
-apt-get -y update
-apt-get -y install openjdk-8-jdk
+add-apt-repository -y ppa:openjdk-r/ppa 
+sudo apt-get update -q 
+sudo apt install -y openjdk-11-jdk
 apt-get -y install zookeeperd
 wget http://mirror.cogentco.com/pub/apache/kafka/2.3.0/kafka_2.11-2.3.0.tgz
 tar -xzf kafka_2.11-2.3.0.tgz
